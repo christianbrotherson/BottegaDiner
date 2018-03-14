@@ -1,70 +1,119 @@
 import random
 
 breakfast_menu = {
-  1: ['Pancakes': 7.49],
-  2: ['French Toast': 7.99],
-  3: ['Omlet': 6.99],
-  4: ['Country Fried Steak': 10.99]
+  'Pancakes': 7.49,
+  'French Toast': 7.99,
+  'Omlet': 6.99,
+  'Country Fried Steak': 10.9
 }
 
 breakfast_menu_sides = {
-  1: ['Bacon': .99],
-  2: ['Sausage': 1.49],
-  3: ['Eggs': 1.49],
-  4: ['Hash Browns': 1.49],
+  'Bacon': .99,
+  'Sausage': 1.49,
+  'Eggs': 1.49,
+  'Hash Browns': 1.49,
 }
 
 lunch_menu = {
-  1: ['Steak': 15.99],
-  2: ['Hamburger': 12.99],
-  3: ['Pasta': 11.99],
-  4: ['Ribs': 13.99]
+  'Steak': 15.99,
+  'Hamburger': 12.99,
+  'Pasta': 11.99,
+  'Ribs': 13.99
 }
 
 lunch_menu_sides = {
-  1: ['Fries': .49],
-  2: ['Salad': .20],
-  3: ['Onion Rings': 1.49],
-  4: ['Baked Potato': .99],  
+  'Fries': .49,
+  'Salad': .20,
+  'Onion Rings': 1.49,
+  'Baked Potato': .99 
 }
 
 dinner_menu = {
-  1: ['Steak': 20.99],
-  2: ['Hamburger': 15.99],
-  3: ['Pasta': 16.99],
-  4: ['Ribs': 17.49]  
+  'Steak': 20.99,
+  'Hamburger': 15.99,
+  'Pasta': 16.99,
+  'Ribs': 17.49 
 }
 
 dinner_menu_sides = {
-  1: ['Fries': 1.49],
-  2: ['Salad': 1.20],
-  3: ['Onion Rings': 1.99],
-  4: ['Baked Potato': 1.49],   
+  'Fries': 1.49,
+  'Salad': 1.20,
+  'Onion Rings': 1.99,
+  'Baked Potato': 1.49 
 }
 
-def print_menu():
-  print("~~~Bottega Diner~~~")
+def menu():
+  print("~Bottega Diner~\n\n--Breakfast Menu/Lunch Menu/Dinner Menu--\n")
+  print("---Entrees---")
+  print("\n-Breakfast Menu-")
+  for f, p in breakfast_menu.items():
+    print(f"{f}: ${p}")
+  print("\n-Breakfast Menu Sides-")
+  for f, p in breakfast_menu_sides.items():
+    print(f"{f}: ${p}")
+  print("\n-Lunch Menu-")
+  for f, p in lunch_menu.items():
+    print(f"{f}: ${p}")
+  print("\n-Lunch Menu Sides-")
+  for f, p in lunch_menu_sides.items():
+    print(f"{f}: ${p}")
+  print("\n-Dinner Menu-")
+  for f, p in dinner_menu.items():
+    print(f"{f}: ${p}")
+  print("\n-Dinner Menu Sides-")
+  for f, p in dinner_menu_sides.items():
+    print(f"{f}: ${p}")
+
+
+
+  # def menu():
+  # print("~~~~~Entrees~~~~~")
+  # if day_time == 'breakfast':
+  #   print("  \n--Breakfast Menu--")
+  #   for i, x in breakfast_menu.items():
+  #     print(f"  {i}: ${x}")
+  #   print("\n~~~~~Sides~~~~~")
+  #   for i, x, in breakfast_side_options.items():
+  #     print(f"  {i}: ${x}")
+  # elif day_time == 'lunch':
+  #   print("  \n--Lunch Menu--")
+  #   for i, x in lunch_menu.items():
+  #     print(f"  {i}: ${x}")  
+  #   print("\n~~~~~Sides~~~~~")
+  #   for i, x, in side_options.items():
+  #     print(f"  {i}: ${x}")
+  # elif day_time == 'dinner':
+  #   print("  \n--Dinner Menu--")
+  #   for i, x in dinner_menu.items():
+  #     print(f"  {i}: ${x}")   
+  #   print("\n~~~~~Sides~~~~~")
+  #   for i, x, in side_options.items():
+  #     print(f"  {i}: ${x}")
 
 def time_of_day():
-
+  return
 def waitress_comments():
-
+  return
 def order():
-
+  return
 
 class Chef_Special():
   def __init__():
-
+    return
   def random_entree():
-  
-
-  def random_sides():
+    return
+  def random_sides(): 
+    return
 
 class Bill():
+  def __init__():
+    return
   def entree_price():
-
+    return
   def sides_prince():
+    return
 
 def main():
+  print(menu())
 
 main()
