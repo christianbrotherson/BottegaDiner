@@ -1,4 +1,5 @@
 from random import choice
+from time import sleep
 
 breakfast_menu = {
   'Pancakes': 7.49,
@@ -41,6 +42,22 @@ dinner_menu_sides = {
   'Onion Rings': 1.99,
   'Baked Potato': 1.49 
 }
+
+def greeting(time, waiter_name):
+  print(f"Thanks for coming in to Bottega Diner! We have the best {time} in town!\n\nMy name is {waiter_name} and I'll be serving you today.")
+  sleep(2)
+  name = input(f"\nWhat's your name?")
+  sleep(1)
+  more_time = (input(f"{name} is a great name! Would you like more time to order?")).lower()
+  if more_time == 'yes':
+    sleep(5)
+    return name
+  else:
+    return name
+
+def random_waiter_name():
+  waiter_name = choice(['Sam', 'Martha', 'Rosie', 'Mark'])
+  return waiter_name
 
 def menu(time):
   print(f"~Bottega Diner~\n\n--{time.capitalize()} Menu--\n")
