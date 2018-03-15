@@ -64,34 +64,15 @@ def menu():
   for f, p in dinner_menu_sides.items():
     print(f"{f}: ${p}")
 
-
-
-  # def menu():
-  # print("~~~~~Entrees~~~~~")
-  # if day_time == 'breakfast':
-  #   print("  \n--Breakfast Menu--")
-  #   for i, x in breakfast_menu.items():
-  #     print(f"  {i}: ${x}")
-  #   print("\n~~~~~Sides~~~~~")
-  #   for i, x, in breakfast_side_options.items():
-  #     print(f"  {i}: ${x}")
-  # elif day_time == 'lunch':
-  #   print("  \n--Lunch Menu--")
-  #   for i, x in lunch_menu.items():
-  #     print(f"  {i}: ${x}")  
-  #   print("\n~~~~~Sides~~~~~")
-  #   for i, x, in side_options.items():
-  #     print(f"  {i}: ${x}")
-  # elif day_time == 'dinner':
-  #   print("  \n--Dinner Menu--")
-  #   for i, x in dinner_menu.items():
-  #     print(f"  {i}: ${x}")   
-  #   print("\n~~~~~Sides~~~~~")
-  #   for i, x, in side_options.items():
-  #     print(f"  {i}: ${x}")
-
 def time_of_day():
-  return
+  time = choice(['b', 'l', 'd'])
+  if time == 'b':
+    return 'breakfast'
+  elif time == 'l':
+    return 'lunch'
+  else:
+    return 'dinner'
+
 def waitress_comments():
   return
 def order():
