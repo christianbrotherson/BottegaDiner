@@ -1,10 +1,10 @@
-import random
+from random import choice
 
 breakfast_menu = {
   'Pancakes': 7.49,
   'French Toast': 7.99,
   'Omlet': 6.99,
-  'Country Fried Steak': 10.9
+  'Country Fried Steak': 10.99
 }
 
 breakfast_menu_sides = {
@@ -23,7 +23,7 @@ lunch_menu = {
 
 lunch_menu_sides = {
   'Fries': .49,
-  'Salad': .20,
+  'Salad': .19,
   'Onion Rings': 1.49,
   'Baked Potato': .99 
 }
@@ -37,32 +37,32 @@ dinner_menu = {
 
 dinner_menu_sides = {
   'Fries': 1.49,
-  'Salad': 1.20,
+  'Salad': 1.19,
   'Onion Rings': 1.99,
   'Baked Potato': 1.49 
 }
 
-def menu():
-  print("~Bottega Diner~\n\n--Breakfast Menu/Lunch Menu/Dinner Menu--\n")
+def menu(time):
+  print(f"~Bottega Diner~\n\n--{time.capitalize()} Menu--\n")
   print("---Entrees---")
-  print("\n-Breakfast Menu-")
-  for f, p in breakfast_menu.items():
-    print(f"{f}: ${p}")
-  print("\n-Breakfast Menu Sides-")
-  for f, p in breakfast_menu_sides.items():
-    print(f"{f}: ${p}")
-  print("\n-Lunch Menu-")
-  for f, p in lunch_menu.items():
-    print(f"{f}: ${p}")
-  print("\n-Lunch Menu Sides-")
-  for f, p in lunch_menu_sides.items():
-    print(f"{f}: ${p}")
-  print("\n-Dinner Menu-")
-  for f, p in dinner_menu.items():
-    print(f"{f}: ${p}")
-  print("\n-Dinner Menu Sides-")
-  for f, p in dinner_menu_sides.items():
-    print(f"{f}: ${p}")
+  if time == 'breakfast':
+    for food, price in breakfast_menu.items():
+      print(f"{food}: ${price}")
+    print("\n---Sides---")
+    for food, price in breakfast_menu_sides.items():
+      print(f"{food}: ${price}")
+  elif time == 'lunch':
+    for food, price in lunch_menu.items():
+      print(f"{food}: ${price}")
+    print("\n---Sides---")
+    for food, price in lunch_menu_sides.items():
+      print(f"{food}: ${price}")
+  else:
+    for food, price in dinner_menu.items():
+      print(f"{food}: ${price}")
+    print("\n---Sides---")
+    for food, price in dinner_menu_sides.items():
+      print(f"{food}: ${price}")
 
 def time_of_day():
   time = choice(['b', 'l', 'd'])
@@ -95,6 +95,6 @@ class Bill():
     return
 
 def main():
-  print(menu())
+  menu(time_of_day())
 
 main()
