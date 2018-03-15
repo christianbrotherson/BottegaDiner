@@ -44,16 +44,19 @@ dinner_menu_sides = {
 }
 
 def greeting(time, waiter_name):
-  print(f"Thanks for coming in to Bottega Diner! We have the best {time} in town!\n\nMy name is {waiter_name} and I'll be serving you today.")
+  print(f"Thanks for coming in to Bottega Diner! We have the best {time} in town!")
+  sleep(1)
+  print(f"\nMy name is {waiter_name} and I'll be serving you today.")
   sleep(2)
   name = input(f"\nWhat's your name?")
   sleep(1)
-  more_time = (input(f"{name} is a great name! Would you like more time to order?")).lower()
+  print(f"\nIt is nice to meet you, {name}! Here is your menu!")
+  menu(time)
+  sleep(2)
+  more_time = (input("\nWould you like more time to order?")).lower()
   if more_time == 'yes':
     sleep(5)
-    return name
-  else:
-    return name
+  return name
 
 def random_waiter_name():
   waiter_name = choice(['Sam', 'Martha', 'Rosie', 'Mark'])
@@ -88,11 +91,19 @@ def time_of_day():
   elif time == 'l':
     return 'lunch'
   else:
-    return 'dinner'
+    return 'dinner'    
+
+def order():
+  entree = input("\nWhat can I get for you? Let's start with your entree!")
+  side_one = input("And your first side?")
+  side_two = input("And your second side?")
+  correct = input(f"\nAlright, you want the {entree} with {side_one} and {side_two}?").lower()
+  if correct == 'yes':
+    print("\nI'll get that order right in for you!")
+  else:
+    print("\nI'm pretty sure that's what you said and that's what you get...")   
 
 def waitress_comments():
-  return
-def order():
   return
 
 class Chef_Special():
@@ -112,6 +123,5 @@ class Bill():
     return
 
 def main():
-  menu(time_of_day())
 
 main()
